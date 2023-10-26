@@ -1,0 +1,28 @@
+{
+    "name": "Python 3.10",
+    "build": {
+        "context": ".",
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.analysis.autoImportCompletions": true,
+                "python.analysis.typeCheckingMode": "basic",
+                "python.analysis.extraPaths": [
+                    ".venv/lib/python3.10/site-packages"
+                ]
+            },
+            "extensions": [
+                "eamodio.gitlens",
+                "KevinRose.vsc-python-indent",
+                "ms-python.black-formatter",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "redhat.vscode-yaml",
+                "shardulm94.trailing-spaces",
+                "VisualStudioExptTeam.vscodeintellicode"
+            ]
+        }
+    }
+}

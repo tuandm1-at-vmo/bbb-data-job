@@ -1,0 +1,10 @@
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+*/5 * * * * root cd /bicyclebluebook && python -m app.job.231013_transfer_sebicycle_from_mongo_to_mssql
+
+0 6 * * * * root cd /bicyclebluebook && python -m app.job.231025_fetch_trekbikes_data --source-collection tuandm1_trekbikes --target-collection tuandm1_trekbikes_xmls --target-year 2020
+10 6 * * * * root cd /bicyclebluebook && python -m app.job.231025_fetch_trekbikes_data --source-collection tuandm1_trekbikes --target-collection tuandm1_trekbikes_xmls --target-year 2021
+20 6 * * * * root cd /bicyclebluebook && python -m app.job.231025_fetch_trekbikes_data --source-collection tuandm1_trekbikes --target-collection tuandm1_trekbikes_xmls --target-year 2022
+30 6 * * * * root cd /bicyclebluebook && python -m app.job.231025_fetch_trekbikes_data --source-collection tuandm1_trekbikes --target-collection tuandm1_trekbikes_xmls --target-year 2023
+40 6 * * * * root cd /bicyclebluebook && python -m app.job.231025_fetch_trekbikes_data --source-collection tuandm1_trekbikes --target-collection tuandm1_trekbikes_xmls --target-year 2024

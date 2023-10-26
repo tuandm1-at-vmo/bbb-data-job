@@ -1,0 +1,14 @@
+services:
+  worker:
+    build: ..
+    image: bicyclebluebook/bbb-data-job:20231013
+    container_name: bbb-data-job-worker
+    volumes:
+      - ../logs:/bicyclebluebook/logs/
+    stdin_open: true
+    tty: true
+    networks:
+      - bbb-data-job
+
+networks:
+  bbb-data-job: {}
